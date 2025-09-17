@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-icon">
+      <i [class]="service.icon"></i>
+    </div>
+    <div class="card-category" *ngIf="service.category">
+      {{ service.category }}
+    </div>
+  </div>
+  
+  <div class="card-content">
+    <h3>{{ service.title }}</h3>
+    <p>{{ service.description }}</p>
+    
+    <div class="features-list" *ngIf="service.features && service.features.length > 0">
+      <h4>What's included:</h4>
+      <ul>
+        <li *ngFor="let feature of service.features">✓ {{ feature }}</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="card-footer">
+    <div class="card-price">
+      <span class="price-text">{{ service.price }}</span>
+    </div>
+    <button class="contact-button" (click)="onContactClick()">
+      📱 Drop a Message
+    </button>
+  </div>
+</div>

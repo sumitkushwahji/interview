@@ -1,0 +1,43 @@
+<header class="hero-section">
+  <div class="hero-content">
+    <h1>Your One-Stop Tech Solution Hub</h1>
+    <p>From tutoring to technical support, we've got you covered with professional services at affordable prices.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-number">500+</span>
+        <span class="stat-label">Happy Students</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">15+</span>
+        <span class="stat-label">Services</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Support</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="services-section">
+  <div class="section-header">
+    <h2>Our Services</h2>
+    <p>Choose from our wide range of educational and technical services</p>
+  </div>
+  
+  <div class="services-container">
+    <app-service-card *ngFor="let service of services" [service]="service"></app-service-card>
+  </div>
+</section>
+
+<footer class="contact-section">
+  <div class="contact-content">
+    <h3>Ready to Get Started?</h3>
+    <p>Contact us today for any of our services. We're here to help you succeed!</p>
+    <div class="contact-methods">
+      <button class="primary-btn">📱 WhatsApp</button>
+      <button class="secondary-btn">📧 Email Us</button>
+      <button class="secondary-btn">📞 Call Now</button>
+    </div>
+  </div>
+</footer>
