@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TechHub - Your One-Stop Tech Solution</title>
+  <base href="/interview/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional tutoring and technical services - from Windows installation to programming classes">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Redirect for Angular SPA on GitHub Pages -->
+  <script>
+    // Store the current location for the redirect
+    sessionStorage.redirect = location.href;
+  </script>
+</head>
+<body>
+  <!-- GitHub Pages SPA redirect handling -->
+  <script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+  <!-- Redirect to index.html -->
+  <script>
+    window.location.replace('/interview/');
+  </script>
+</body>
+</html>
