@@ -15,6 +15,41 @@ export class Home {
   private phoneNumber = '919479966498'; // Replace with your WhatsApp number
   private email = 'sumitkushwahji@gmail.com'; // Replace with your email
 
+  // Filter properties
+  selectedCategory: string = 'All';
+  searchTerm: string = '';
+
+  // Get unique categories from services
+  get categories(): string[] {
+    const serviceCategories = this.services
+      .map(service => service.category)
+      .filter((category): category is string => category !== undefined);
+    const uniqueCategories = [...new Set(serviceCategories)];
+    return ['All', ...uniqueCategories];
+  }
+
+  // Filter services based on selected category and search term
+  get filteredServices(): Service[] {
+    let filtered = this.services;
+
+    // Filter by category
+    if (this.selectedCategory !== 'All') {
+      filtered = filtered.filter(service => service.category === this.selectedCategory);
+    }
+
+    // Filter by search term
+    if (this.searchTerm.trim()) {
+      const term = this.searchTerm.toLowerCase();
+      filtered = filtered.filter(service => 
+        service.title.toLowerCase().includes(term) ||
+        service.description.toLowerCase().includes(term) ||
+        (service.category && service.category.toLowerCase().includes(term))
+      );
+    }
+
+    return filtered;
+  }
+
    services: Service[] = [
     {
       id: 1,
@@ -152,6 +187,21 @@ export class Home {
       features: ['App basics', 'UI/UX principles', 'Cross-platform development', 'Publishing guide']
     }
   ];
+
+  // Filter methods
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+  }
+
+  onSearchChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.searchTerm = target.value;
+  }
+
+  clearFilters() {
+    this.selectedCategory = 'All';
+    this.searchTerm = '';
+  }
 
   // Contact Methods
   openWhatsApp() {
