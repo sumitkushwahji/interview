@@ -1,59 +1,118 @@
-# Interview
+# TechHub - Your One-Stop Tech Solution
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+A modern Angular 19 single-page application showcasing various educational and technical services including tutoring, programming classes, technical support, and more.
 
-## Development server
+## 🌟 Features
 
-To start a local development server, run:
+- **15+ Professional Services** including:
+  - Windows Installation (₹300)
+  - Online tutoring for Math, Science, English
+  - Programming classes (C, Java, Python)
+  - Web development and mobile app development
+  - Technical support and PC building
+  - Digital marketing and Excel training
 
-```bash
-ng serve
-```
+- **Modern UI/UX Design**:
+  - Responsive grid layout
+  - Beautiful gradient backgrounds
+  - Hover animations and effects
+  - Font Awesome icons
+  - Mobile-first responsive design
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Professional Features**:
+  - WhatsApp integration for instant contact
+  - Service categorization
+  - Feature lists for each service
+  - Professional color scheme
 
-## Code scaffolding
+## 🚀 Live Demo
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Visit the live application: [https://sumitkushwahji.github.io/interview/](https://sumitkushwahji.github.io/interview/)
 
-```bash
-ng generate component component-name
-```
+## 💻 Development
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm or yarn
+- Angular CLI
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Installation
 
 ```bash
-ng test
+# Clone the repository
+git clone https://github.com/sumitkushwahji/interview.git
+cd interview
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
 ```
 
-## Running end-to-end tests
+The application will be available at `http://localhost:4200/`
 
-For end-to-end (e2e) testing, run:
+### Building for Production
 
 ```bash
-ng e2e
+# Build for production
+npm run build
+
+# Build for GitHub Pages
+npm run build:github-pages
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🚀 Deployment
 
-## Additional Resources
+### Manual Deployment to GitHub Pages
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+# Build and deploy to GitHub Pages
+npm run deploy
+```
+
+### Automatic Deployment
+
+The application is configured with GitHub Actions for automatic deployment. Every push to the `master` branch will trigger an automatic deployment to GitHub Pages.
+
+## 🛠️ Tech Stack
+
+- **Framework**: Angular 19
+- **Language**: TypeScript
+- **Styling**: CSS3 with custom animations
+- **Icons**: Font Awesome 6
+- **Fonts**: Inter (Google Fonts)
+- **Deployment**: GitHub Pages
+- **CI/CD**: GitHub Actions
+
+## 📱 Services Offered
+
+1. **Windows Installation** - ₹300
+2. **Math Tutoring** - Starting at ₹500/month
+3. **Science Classes** - Starting at ₹600/month
+4. **English Language Classes** - Starting at ₹450/month
+5. **Computer Classes** - Starting at ₹400/month
+6. **Programming Languages** (C, Java, Python)
+7. **Web Development** - Starting at ₹1000/month
+8. **Mobile App Development** - Starting at ₹1200/month
+9. **Digital Marketing** - Starting at ₹700/month
+10. **Excel Training** - Starting at ₹350/month
+11. **Technical Support** - ₹200/session
+12. **PC Build & Upgrade** - Free consultation
+13. **Doubt Clearing** - ₹150/hour
+14. And more...
+
+## 📞 Contact
+
+Ready to get started? Contact us through:
+- 📱 WhatsApp (integrated in the app)
+- 📧 Email
+- 📞 Phone
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ using Angular 19
