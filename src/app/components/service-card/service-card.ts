@@ -12,9 +12,10 @@ export class ServiceCard {
   @Input() service!: Service; // The '!' tells TypeScript it will be provided
 
   onContactClick() {
-    // You can customize this to open WhatsApp, email, or a contact form
+    // Replace with your actual WhatsApp number (include country code, no + sign)
+    const phoneNumber = '919479966498'; // Replace with your number like: 919876543210 for India
     const message = `Hi! I'm interested in your ${this.service.title} service. Can you provide more details?`;
-    const whatsappUrl = `https://wa.me/YOUR_PHONE_NUMBER?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   }
 }

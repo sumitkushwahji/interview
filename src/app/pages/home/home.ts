@@ -11,6 +11,10 @@ import { ServiceCard } from '../../components/service-card/service-card';
 })
 export class Home {
 
+  // Contact information - Replace with your actual details
+  private phoneNumber = '919479966498'; // Replace with your WhatsApp number
+  private email = 'sumitkushwahji@gmail.com'; // Replace with your email
+
    services: Service[] = [
     {
       id: 1,
@@ -148,4 +152,23 @@ export class Home {
       features: ['App basics', 'UI/UX principles', 'Cross-platform development', 'Publishing guide']
     }
   ];
+
+  // Contact Methods
+  openWhatsApp() {
+    const message = 'Hi! I would like to know more about your services. Can you help me?';
+    const whatsappUrl = `https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
+  openEmail() {
+    const subject = 'Inquiry about your services';
+    const body = 'Hi! I am interested in your services. Please provide more information.';
+    const emailUrl = `mailto:${this.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(emailUrl, '_blank');
+  }
+
+  callNow() {
+    // This will try to initiate a call on mobile devices
+    window.open(`tel:+${this.phoneNumber}`, '_self');
+  }
 }
